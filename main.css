@@ -1,0 +1,194 @@
+.app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.02);
+  width: 100vw;
+  height: 100vh;
+}
+
+.app .calculator {
+  background-color: #eaedef;
+  width: 320px;
+  height: 520px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.app .calculator #result {
+  height: 120px;
+}
+
+.app .calculator #result #output-text {
+  width: 250px;
+  height: 120px;
+  float: left;
+}
+
+.app .calculator #result #microphone {
+  height: 30px;
+  width: 30px;
+  float: right;
+  background-image: url(mic.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  margin-top: 45px;
+  margin-right: 10px;
+}
+
+.app .calculator #result .record {
+  -webkit-animation: microphone-animation 1.5s infinite;
+          animation: microphone-animation 1.5s infinite;
+}
+
+.app .calculator #result #output-microphone:hover .tooltip {
+  visibility: visible;
+}
+
+.app .calculator #result .tooltip {
+  font-size: 10px;
+  position: absolute;
+  background-color: #dddddd;
+  color: #636363;
+  padding: 10px;
+  top: 155px;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.app .calculator #result .tooltip::before {
+  content: '';
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #dddddd transparent transparent;
+  margin-left: -10px;
+  left: 0;
+}
+
+.app .calculator #keyboard {
+  height: 400px;
+  font-weight: bolder;
+}
+
+.app .calculator #history {
+  text-align: right;
+  height: 20px;
+  margin: 0 20px;
+  font-size: 15px;
+  color: #919191;
+}
+
+.app .calculator #output {
+  text-align: right;
+  height: 60px;
+  margin: 10px 20px;
+  font-size: 20px;
+}
+
+.app .calculator .operator, .app .calculator .number, .app .calculator .empty {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 15px;
+  border-radius: 50%;
+  border-width: 0;
+}
+
+.app .calculator .number, .app .calculator .empty {
+  background-color: #eaedef;
+}
+
+.app .calculator .number, .app .calculator .operator {
+  cursor: pointer;
+}
+
+.app .calculator .operator:active, .app .calculator .number:active {
+  font-size: 16px;
+}
+
+.app .calculator .operator:focus, .app .calculator .number:focus, .app .calculator .empty:focus {
+  outline: none;
+}
+
+.app .calculator button:nth-child(4) {
+  font-size: 20px;
+  background-color: #20b2aa;
+}
+
+.app .calculator button:nth-child(8) {
+  font-size: 20px;
+  background-color: #ffa500;
+}
+
+.app .calculator button:nth-child(12) {
+  font-size: 20px;
+  background-color: #f08080;
+}
+
+.app .calculator button:nth-child(16) {
+  font-size: 20px;
+  background-color: #7d93e0;
+}
+
+.app .calculator button:nth-child(20) {
+  font-size: 20px;
+  background-color: #9477af;
+}
+
+.app .calculator button {
+  background-color: #dadada;
+}
+
+@-webkit-keyframes microphone-animation {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 148, 255, 0.4);
+            box-shadow: 0 0 0 10px rgba(0, 148, 255, 0.4);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 148, 255, 0);
+            box-shadow: 0 0 0 0 rgba(0, 148, 255, 0);
+  }
+}
+
+@keyframes microphone-animation {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 148, 255, 0.4);
+            box-shadow: 0 0 0 10px rgba(0, 148, 255, 0.4);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 148, 255, 0);
+            box-shadow: 0 0 0 0 rgba(0, 148, 255, 0);
+  }
+}
+/*# sourceMappingURL=main.css.map */
